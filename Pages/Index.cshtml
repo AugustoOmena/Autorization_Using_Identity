@@ -3,8 +3,127 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+     <img class="img-fluid" width="270px" style="margin-top: 6vh; margin-bottom: 2vh; user-select: none;" src="img/LogoPrincipalRetangulo.png" alt="Logo" draggable="false">
+</div>
+
+<div class="BarraDePesquisa">
+    <span style="color:#6c757d; padding: 7px;" class="material-symbols-outlined">
+        search
+    </span>
+    <input type="text" id="searchInput" placeholder="Pesquisar Serviços">
+    <span style="color:#6c757d; padding: 7px; display: none;" class="material-symbols-outlined" id="closeIcon" title="Limpar">
+        close
+    </span>
+    <span style="color:#6c757d; padding: 7px;" class="material-symbols-outlined" title="Categorias">
+        category
+    </span>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('searchInput');
+        const closeIcon = document.getElementById('closeIcon');
+
+        function updateCloseIcon() {
+            if (searchInput.value.trim() !== '') {
+                closeIcon.style.display = 'inline-block';
+            } else {
+                closeIcon.style.display = 'none';
+            }
+        }
+
+        searchInput.addEventListener('input', updateCloseIcon);
+        searchInput.addEventListener('focus', updateCloseIcon);
+
+        closeIcon.addEventListener('click', function () {
+            searchInput.value = '';
+            closeIcon.style.display = 'none';
+        });
+    });
+</script>
+
+<section style="margin-top: 2vh;" class="flex">
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div class="Cplus2">
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div class="Cplus">
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+</section>
+<section style="margin-bottom: 2vh" class="flex">
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div>
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div class="Cplus2">
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+    <div class="Cplus">
+        <img class="categoria" src="img/cinza.png" alt="Cat">
+        <p>Categoria</p>
+    </div>
+
+</section>
+
+<section class="flexServicosDestaque">
+    <div>
+        <img class="ServicosDestaque" src="img/cinza.png" alt="Cat">
+        <p>Descrição</p>
+    </div>
+    <div>
+        <img class="ServicosDestaque" src="img/cinza.png" alt="Cat">
+        <p>Descrição</p>
+    </div>
+    <div>
+        <img class="ServicosDestaque" src="img/cinza.png" alt="Cat">
+        <p>Descrição</p>
+    </div>
+    <div>
+        <img class="ServicosDestaque" src="img/cinza.png" alt="Cat">
+        <p>Descrição</p>
+    </div>
+    <div class="SDestaque">
+        <img class="ServicosDestaque" src="img/cinza.png" alt="Cat">
+        <p>Descrição</p>
+    </div>
+</section>
+
+<div class="text-center mt-5">
+    <h1 style="background: linear-gradient(to right, #4CAF50, #2196F3); -webkit-background-clip: text; color: transparent;">Quer anunciar um serviço também?</h1><br />
+    <button class="btn btn-success" style="background: linear-gradient(to right, #4CAF50, #2196F3); border-color: #4CAF50;">Clique aqui</button>
 </div>
