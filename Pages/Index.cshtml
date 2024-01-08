@@ -10,7 +10,7 @@
      <img class="img-fluid" width="270px" style="margin-top: 6vh; margin-bottom: 2vh; user-select: none;" src="img/LogoPrincipalRetangulo.png" alt="Logo" draggable="false">
 </div>
 
-<div class="BarraDePesquisa">
+<div class="BarraDePesquisa" id="openModalPesquisaBtn">
     <span style="color:#6c757d; padding: 7px;" class="material-symbols-outlined">
         search
     </span>
@@ -139,23 +139,83 @@
 
 <hr/>
 
-<!-- Modal -->
+<!-- Modal Servico -->
 <div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Título do Modal</h5>
+                <h5 class="modal-title">Cadastro Usuário Premium</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Corpo do Modal -->
+            <div class="modal-body">
+                <!-- Formulário -->
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoria">Categoria:</label>
+                        <select class="form-control" id="categoria">
+                            <!-- Categorias -->
+                            <option value="categoria1">Categoria 1</option>
+                            <option value="categoria2">Categoria 2</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Atende em domicílio?</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="atendimento" id="sim" value="sim">
+                            <label class="form-check-label" for="sim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="atendimento" id="nao" value="nao" checked>
+                            <label class="form-check-label" for="nao">Não</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="enderecoGroup" style="display: none;">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fotos">Selecione 5 fotos:</label>
+                        <input type="file" class="form-control-file" id="fotos" multiple>
+                    </div>
+
+                    <button type="button" class="btn btn-success">Confirmar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Localizacao -->
+<div class="modal fade custom-modal" id="myModalPesquisa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Informe sua cidade para descobrir<br /><span style="color:#4CAF50">serviços exclusivos</span> na sua região</h5>                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- Conteúdo do modal -->
-                <p>Texto do modal aqui.</p>
+                <p>Informe sua localização:</p>
+                <input type="text" id="inputLocalizacao" placeholder="Digite sua localização" />
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <!-- Outros botões do rodapé do modal, se necessário -->
+                <button type="button" class="btn btn-primary" onclick="obterLocalizacao()">Obter Localização</button>
             </div>
         </div>
     </div>
