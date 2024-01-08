@@ -128,10 +128,34 @@
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6 text-md-left text-center">
             <h1 style="background: linear-gradient(to right, #4CAF50, #2196F3); -webkit-background-clip: text; color: transparent;">Quer anunciar um serviço também?</h1>
-            <button class="btn btn-success mt-3" style="background: linear-gradient(to right, #4CAF50, #2196F3); border-color: #4CAF50;">Clique aqui</button>
+            <button class="btn btn-success mt-3" style="background: linear-gradient(to right, #4CAF50, #2196F3); border-color: #4CAF50;" id="openModalBtn">Clique aqui</button>        
         </div>
         <div class="col-md-6 text-center">
             <img class="img-fluid mt-3" id="changingImage" style="max-height: 400px;" />
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Título do Modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Conteúdo do modal -->
+                <p>Texto do modal aqui.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <!-- Outros botões do rodapé do modal, se necessário -->
+            </div>
         </div>
     </div>
 </div>

@@ -165,3 +165,26 @@ img.ServicosDestaque {
 .material-symbols-outlined {
     cursor: pointer;
 }
+
+/* Modal */
+
+@media (max-width: 769px) {
+    .custom-modal .modal-dialog {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .custom-modal .modal-content {
+        border-radius: 0;
+    }
+}
+
+.custom-modal .modal-dialog {
+    max-width: 800px; /* Largura máxima padrão */
+}
+
+.custom-modal .modal-body {
+    max-height: 500px; /* Altura máxima padrão */
+    overflow-y: auto;
+}

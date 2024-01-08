@@ -10,7 +10,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
     options.UseSqlServer(connectionString);
 });
 
