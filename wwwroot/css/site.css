@@ -142,6 +142,7 @@ img.ServicosDestaque {
         padding: 8px 15px;
         border-radius: 20px;
         cursor: pointer;
+        margin-left: 5px;
     }
 
     .BarraDePesquisa input:focus {
@@ -188,3 +189,22 @@ img.ServicosDestaque {
     max-height: 500px; /* Altura máxima padrão */
     overflow-y: auto;
 }
+
+/* campo de preencher cidade*/
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .custom-select {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #ced4da;
+      height: calc(2.25rem + 2px);
+      padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    }
+
+    .custom-select:focus {
+      border-color: #80bdff;
+      box-shadow: none;
+    }
+

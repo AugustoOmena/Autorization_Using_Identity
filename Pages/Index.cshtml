@@ -10,17 +10,20 @@
      <img class="img-fluid" width="270px" style="margin-top: 6vh; margin-bottom: 2vh; user-select: none;" src="img/LogoPrincipalRetangulo.png" alt="Logo" draggable="false">
 </div>
 
-<div class="BarraDePesquisa" id="openModalPesquisaBtn">
+<div class="BarraDePesquisa">
     <span style="color:#6c757d; padding: 7px;" class="material-symbols-outlined">
         search
     </span>
-    <input type="text" id="searchInput" placeholder="Pesquisar Serviços">
+    <input type="text" id="searchInput" placeholder="Pesquisar Serviços" style="border-right: 2px solid #ccc; padding-left: 10px;">
     <span style="color:#6c757d; padding: 7px; display: none;" class="material-symbols-outlined" id="closeIcon" title="Limpar">
         close
     </span>
-    <span style="color:#6c757d; padding: 7px;" class="material-symbols-outlined" title="Categorias">
-        category
-    </span>
+    <button id="openModalPesquisaBtn">
+        <span style="color:white; font-size: 16px; top: 2px; " class="material-symbols-outlined" title="cidades" >
+            location_on
+        </span>
+        <span id="cidadeEscolhida">Cidade</span>
+    </button>
 </div>
 
 <script>
@@ -145,9 +148,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Cadastro Usuário Premium</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
 
             <!-- Corpo do Modal -->
@@ -205,17 +205,50 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Informe sua cidade para descobrir<br /><span style="color:#4CAF50">serviços exclusivos</span> na sua região</h5>                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h5 
+                    class="modal-title">Informe sua cidade para descobrir<br /><span style="color:#4CAF50">serviços exclusivos</span> na sua região
+                </h5>
             </div>
-            <div class="modal-body">
-                <!-- Conteúdo do modal -->
+
+             <div class="modal-body">
+                <!-- Conteúdo do modal 
                 <p>Informe sua localização:</p>
-                <input type="text" id="inputLocalizacao" placeholder="Digite sua localização" />
-            </div>
+                <input type="text" id="inputLocalizacao" placeholder="Digite sua localização" /> -->
+                <form>
+                    <div class="form-group">
+                        <label for="cidadeSelect">Selecione uma cidade do Rio de Janeiro:</label>
+                        <select class="form-control" id="cidadeSelect" name="cidade">
+                            <option value="" disabled selected>Escolha uma cidade</option>
+                            <option value="rio">Rio de Janeiro</option>
+                            <option value="niteroi">Niterói</option>
+                            <option value="sao-goncalo">São Gonçalo</option>
+                            <option value="paraty">Paraty</option>
+                            <option value="trindade">Trindade (distrito de Paraty)</option>
+                            <option value="ilha-grande">Ilha Grande (distrito de Paraty)</option>
+                            <option value="angra">Angra dos Reis</option>
+                            <option value="ilha-madeira">Ilha da Madeira</option>
+                            <option value="ilha-itacurucá">Ilha de Itacuruçá</option>
+                            <option value="ilha-martins">Ilha dos Martins</option>
+                            <option value="itimirim">Itimirim</option>
+                            <option value="itingucu">Itinguçú</option>
+                            <option value="mangaratiba">Mangaratiba</option>
+                            <option value="rio-claro">Rio Claro</option>
+                            <option value="conceicao-jacarei">Conceição de Jacareí</option>
+                            <option value="sao-jose-barreiro">São José do Barreiro</option>
+                            <option value="ubatuba">Ubatuba</option>
+                            <option value="caraguatatuba">Caraguatatuba</option>
+                            <option value="sao-sebastiao">São Sebastião</option>
+                            <option value="ilhabela">Ilhabela</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" id="enviarBtn">Confirmar</button>
+                </form>
+            </div> 
+
+
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="obterLocalizacao()">Obter Localização</button>
             </div>
         </div>
     </div>
