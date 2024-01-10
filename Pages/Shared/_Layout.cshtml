@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebAppTestePS.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header>
@@ -21,23 +22,29 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (ViewContext.RouteData.Values["page"]?.ToString() == "/Index")
+                        {
                         <li class="nav-item">
                             <span style="margin-top:12px; color:#4CAF50" class="material-symbols-outlined" asp-area="" asp-page="/Index">
                                 location_on
                             </span>
                         </li>
-                        <li style="padding-right: 1rem;" class="nav-item">
-                            <a style="padding-top: 0; padding-bottom: 0;" class="nav-link text-dark" asp-area="" asp-page="/Index">
-                                <span style="color: #4CAF50;">Informe sua cidade</span> para ver
-                            </a>
-                            <a style="padding-top: 0; padding-bottom: 0;" class="nav-link text-dark" asp-area="" asp-page="/Index">serviços em sua localização</a>
-                        </li>
+                            <li style="padding-right: 1rem;" class="nav-item semCidade">
+                                <a style="padding-top: 0; padding-bottom: 0;" class="nav-link text-dark" asp-area="" asp-page="/Index">
+                                    <span style="color: #4CAF50;">Informe sua cidade</span> para ver
+                                </a>
+                                <a style="padding-top: 0; padding-bottom: 0;" class="nav-link text-dark" asp-area="" asp-page="/Index">serviços em sua localização</a>
+                            </li>
+                            <li style="margin-top:10px; padding-right: 1rem;" class="comCidade">
+                                <span style="color: #4CAF50;" id="cidadeEscolhida">Cidade</span>
+                            </li>
+                        }
 
                         <li class="nav-item">
-                            <a style="margin-top:5px" class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a style="margin-top:4px" class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a style="margin-top:5px" class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a style="margin-top:4px" class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

@@ -18,11 +18,11 @@
     <span style="color:#6c757d; padding: 7px; display: none;" class="material-symbols-outlined" id="closeIcon" title="Limpar">
         close
     </span>
-    <button id="openModalPesquisaBtn">
-        <span style="color:white; font-size: 16px; top: 2px; " class="material-symbols-outlined" title="cidades" >
+    <button id="ChamaModalSelecionarCidade">
+        <span style="color:white; font-size: 16px; top: 4px; " class="material-symbols-outlined" title="cidades" >
             location_on
         </span>
-        <span id="cidadeEscolhida">Cidade</span>
+        <span id="TextoBotaoCidade">Cidade</span>
     </button>
 </div>
 
@@ -131,8 +131,20 @@
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6 text-md-left text-center">
-            <h1 style="background: linear-gradient(to right, #4CAF50, #2196F3); -webkit-background-clip: text; color: transparent;">Quer anunciar um serviço também?</h1>
-            <button class="btn btn-success mt-3" style="background: linear-gradient(to right, #4CAF50, #2196F3); border-color: #4CAF50;" id="openModalBtn">Clique aqui</button>        
+            <h1 style="background: linear-gradient(to right, #4CAF50, #2196F3);
+                -webkit-background-clip:text; font-size: 6vw;
+                color: transparent;">Quer anunciar um serviço também?
+            </h1>
+            <button class="btn btn-success mt-3"
+                    style="background: linear-gradient(to right, #4CAF50, #2196F3);
+               border-color: #4CAF50;
+               padding: 3% 5%; /* Ajusta o padding para ser responsivo */
+               font-size: 1.5em; /* Ajusta o tamanho da fonte usando em */
+               border-radius: 9px;"
+                    id="ModalCadastroDeClientePremium">
+                Clique aqui
+            </button>
+
         </div>
         <div class="col-md-6 text-center">
             <img class="img-fluid mt-3" id="changingImage" style="max-height: 400px;" />
@@ -143,7 +155,7 @@
 <hr/>
 
 <!-- Modal Servico -->
-<div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade custom-modal" id="McriarPremium" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -201,7 +213,7 @@
 </div>
 
 <!-- Modal Localizacao -->
-<div class="modal fade custom-modal" id="myModalPesquisa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade custom-modal" id="MselecionarCidade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -243,7 +255,7 @@
                         </select>
                     </div>
 
-                    <button type="button" class="btn btn-primary" id="enviarBtn">Confirmar</button>
+                    <button type="button" class="btn btn-primary" id="selecionarCidade">Confirmar</button>
                 </form>
             </div> 
 
