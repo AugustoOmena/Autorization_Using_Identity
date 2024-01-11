@@ -25,7 +25,8 @@
                         @if (ViewContext.RouteData.Values["page"]?.ToString() == "/Index")
                         {
                         <li class="nav-item">
-                                <span translate="no" style="margin-top:12px; color:#4CAF50" class="material-symbols-outlined" asp-area="" asp-page="/Index">
+                                <span translate="no" style="margin-top:12px; color:#4CAF50" 
+                                class="material-symbols-outlined" asp-area="" asp-page="/Index">
                                     location_on
                                 </span>
                         </li>
@@ -36,7 +37,7 @@
                                 <a style="padding-top: 0; padding-bottom: 0;" class="nav-link text-dark" asp-area="" asp-page="/Index">serviços em sua localização</a>
                             </li>
                             <li style="margin-top:10px; padding-right: 1rem;" class="comCidade">
-                                <span translate ="no" style="color: #4CAF50;" id="cidadeEscolhida">Cidade</span>
+                                <span style="color: #4CAF50;" id="cidadeEscolhida">Cidade</span>
                             </li>
                         }
 
