@@ -2,10 +2,7 @@
 var imagesPessoaPropaganda = ["1.png", "2.png", "3.png", "4.png"];
 var index = 0;
 var cidadesValidas = [
-    "rio", "niteroi", "sao-goncalo", "paraty", "trindade", "ilha-grande",
-    "angra", "ilha-madeira", "ilha-itacurucá", "ilha-martins", "itimirim",
-    "itingucu", "mangaratiba", "rio-claro", "conceicao-jacarei",
-    "sao-jose-barreiro", "ubatuba", "caraguatatuba", "sao-sebastiao", "ilhabela"
+    "Angra", "Manguaratiba", "Paraty", "Volta Redonda",
 ];
 
 function changeImage() {
