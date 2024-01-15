@@ -207,3 +207,44 @@ img.ServicosDestaque {
       box-shadow: none;
     }
 
+    /* Serviços perfil */
+.profile-container {
+    max-height: 100px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    flex-shrink: 0;
+    max-width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+
+.details-container {
+    margin-left: 10px;
+}
+
+@media (max-width: 770px) {
+    .image-container {
+        max-width: 80px;
+        height: 80px;
+    }
+
+    .profile-image {
+        width: 80px;
+    }
+
+    p {
+        line-height: 1;
+    }
+}

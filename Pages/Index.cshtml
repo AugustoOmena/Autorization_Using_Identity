@@ -104,12 +104,29 @@
 </section>
 
 <hr />
-<div class="Cplus" style="max-width:50px">
-    <img class="categoria" src="img/cinza.png" alt="Cat">
-</div>
-<div>
-</div>
+@for (int i = 0; i < 3; i++)
+{
+    <div class="profile-container">
+        <div class="image-container">
+            <img src="img/cinza.png" class="profile-image" />
+        </div>
+        <div class="details-container col-md-10">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h4>Joao Vitor</h4>
+                    <p class="mb-1">Eletricista/Pintor</p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <p class="mb-1">Rua Japoranga - Japuiba</p>
+                    <p>Atendimento em domicílio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
 <hr />
+
 
 <section class="flexServicosDestaque">
     <div>
