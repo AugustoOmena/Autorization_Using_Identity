@@ -151,12 +151,12 @@ img.ServicosDestaque {
 @media screen and (max-width: 1000px) {
     .BarraDePesquisa {
         width: 100%;
-        max-width: none; /* Remove a largura máxima para ocupar toda a largura da tela */
+        max-width: none;
     }
 
         .BarraDePesquisa input {
             width: 100%;
-            max-width: none; /* Remove a largura máxima para ocupar toda a largura da tela */
+            max-width: none; 
         }
 }
 
@@ -211,10 +211,15 @@ img.ServicosDestaque {
 .profile-container {
     max-height: 100px;
     overflow: hidden;
-    margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 990px;
 }
 
 .image-container {
