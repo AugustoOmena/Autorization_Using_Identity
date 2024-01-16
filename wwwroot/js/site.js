@@ -58,3 +58,20 @@ $("#selecionarCidade").click(function () {
     $("#TextoBotaoCidade").text(cidadeEscolhida);
     $("#MselecionarCidade").modal("hide");
 });
+
+/* Header comportamento */
+document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('.header');
+    var searchBar = document.querySelector('.BarraPesquisaHeader');
+    var offsetToShowSearch = 400;
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > offsetToShowSearch) {
+            header.classList.add('fixed-header');
+            searchBar.classList.add('show-BarraPesquisaHeader');
+        } else {
+            header.classList.remove('fixed-header');
+            searchBar.classList.remove('show-BarraPesquisaHeader');
+        }
+    });
+});

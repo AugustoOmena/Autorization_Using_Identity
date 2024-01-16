@@ -253,3 +253,21 @@ img.ServicosDestaque {
         line-height: 1;
     }
 }
+
+/* Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Outros estilos conforme necessário */
+}
+
+/* BarraDePesquisaDoHeader */
+.BarraPesquisaHeader {
+    display: none; 
+}
+
+.show-BarraPesquisaHeader {
+    display: block;
+}
