@@ -51,19 +51,19 @@ namespace WebAppTestePS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3c53f127-4f4b-45da-9fbc-ce3a8a4b41dc",
+                            Id = "8ff03b9a-0c55-4f23-9e50-a4ea4e5fbb91",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "c774f929-a687-4a6a-ae7b-3b95bacfa05d",
+                            Id = "74917a3b-148d-454e-a6cd-e35971c34869",
                             Name = "client",
                             NormalizedName = "seller"
                         },
                         new
                         {
-                            Id = "973fc0a1-2a25-47c4-b937-af01286237da",
+                            Id = "e1acdf63-676f-4ec4-bf38-458be1f3dfc6",
                             Name = "seller"
                         });
                 });
@@ -283,10 +283,30 @@ namespace WebAppTestePS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageFileName")
+                    b.Property<string>("Image1FileName")
                         .IsRequired()
-                        .HasMaxLength(1500)
-                        .HasColumnType("nvarchar(1500)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Image2FileName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Image3FileName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Image4FileName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Image5FileName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -299,7 +319,7 @@ namespace WebAppTestePS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
