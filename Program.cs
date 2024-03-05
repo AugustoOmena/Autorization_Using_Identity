@@ -6,6 +6,7 @@ using WebAppTestePS.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//guardando vareavel de conexão: Data Source=servpreciseichamei.database.windows.net;Initial Catalog=DbPreciseiChamei;Persist Security Info=True;User ID=AugustoOmena;Password=A@cPL1!po;Trust Server Certificate=True
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
